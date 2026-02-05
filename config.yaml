@@ -1,0 +1,11 @@
+monitor:
+  addresses:
+    - "0x9c2a2a966ed8e47f0c8b7e2ec2b91424f229f6a8"
+  
+feishu:
+  webhook_url: "https://open.larksuite.com/open-apis/bot/v2/hook/98028bbd-54ba-4ee7-b9af-7f7b254a0e00"
+
+hyperliquid:
+  api_url: "https://api.hyperliquid.xyz"
+  ws_url: "wss://api.hyperliquid.xyz/ws"
+  reconnect_delay: 5

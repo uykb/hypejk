@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  monitor:
+    build: .
+    container_name: hyperliquid-monitor
+    restart: always
+    volumes:
+      - ./config.yaml:/app/config.yaml
+      - ./monitor.log:/app/monitor.log
+    environment:
+      - PYTHONUNBUFFERED=1
