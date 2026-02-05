@@ -18,5 +18,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制项目代码
 COPY . .
 
+# 设置 Python 路径，确保能找到 src 模块
+ENV PYTHONPATH=/app
+
 # 运行应用
 CMD ["python", "src/main.py"]
