@@ -2,9 +2,12 @@ version: '3.8'
 
 services:
   monitor:
-    build: .
+    # 从 GitHub Container Registry 拉取镜像
+    image: ghcr.io/uykb/hypejk:latest
     container_name: hyperliquid-monitor
     restart: always
+    # 如果需要本地开发，取消下面的 build 注释并注释掉上面的 image
+    # build: .
     volumes:
       - ./config.yaml:/app/config.yaml
       - ./monitor.log:/app/monitor.log

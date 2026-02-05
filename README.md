@@ -23,10 +23,16 @@ feishu:
   webhook_url: "https://open.larksuite.com/..." # 你的飞书 Webhook URL
 ```
 
-### 2. 使用 Docker 运行 (推荐)
+### 2. 使用 Docker 运行 (GHCR部署)
+
+无需下载代码，只需 `config.yaml` 和 `docker-compose.yml` 即可运行。
+
+1. 创建 `config.yaml` 和 `docker-compose.yml`。
+2. 拉取镜像并运行：
 
 ```bash
-docker-compose up -d --build
+docker-compose pull
+docker-compose up -d
 ```
 
 查看日志：
@@ -34,7 +40,7 @@ docker-compose up -d --build
 docker-compose logs -f
 ```
 
-### 3. 本地运行
+### 3. 本地构建与运行
 
 安装依赖：
 ```bash
